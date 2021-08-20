@@ -14,6 +14,7 @@ function getCost(num, product){
         productCost.innerText = 20;
     }
     
+
     // calculate total
     calculateTotalPrice();
 };
@@ -36,10 +37,12 @@ function calculateTotalPrice(){
 
     const totalPrice = parseInt(bestPrice + memoryCost + storageCost + deliveryCharge);
     
+    
     // update total price in html
     document.getElementById('total-price').innerText = totalPrice;
     document.getElementById('total').innerText = totalPrice;
     
+
     // handle pomo code
     const inputCode = document.getElementById('input-code');
     const inputCodeValue = inputCode.value;
@@ -50,6 +53,7 @@ function calculateTotalPrice(){
         // update main total price
         document.getElementById('total').innerText = discountPrice;
     }
+
     // clear the pomo code input fiels
     inputCode.value = '';
 }
